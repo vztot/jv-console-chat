@@ -40,7 +40,6 @@ public class Main {
             if (answer.equalsIgnoreCase("yes")) {
                 serverThread.start();
             }
-
         }
 
         clientThread = new Thread(new Runnable() {
