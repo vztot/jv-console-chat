@@ -35,10 +35,6 @@ public class Client {
         init();
     }
 
-    public static void main(String[] args) {
-        Client client = new Client(new User("vztot"), "176.37.115.67", 7777);
-    }
-
     private void init() {
         Scanner systemScanner = new Scanner(System.in, Main.ENCODING);
         System.out.println("Info: Initialization complete. "
@@ -117,7 +113,6 @@ public class Client {
                                         List<Message> list =
                                                 storage.get().subList(sizeBefore, sizeAfter);
                                         list.stream()
-                                                .filter(message -> !message.getUser().equals(user))
                                                 .forEach(message -> System.out.println(message));
                                     }
                                 } else {

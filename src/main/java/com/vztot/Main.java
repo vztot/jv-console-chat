@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.setProperty("console.encoding","utf-8");
+        System.setProperty("console.encoding", "utf-8");
 
         System.out.println("Welcome to jv-console-chat app!");
         System.out.print("Enter username: ");
@@ -31,22 +31,17 @@ public class Main {
         if (ipAddress.equalsIgnoreCase("localhost")) {
             System.out.print("Use this app as server: ");
             String answer = new Scanner(System.in, ENCODING).nextLine();
-            serverThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    Server server = new Server(port);
-                }
+            serverThread = new Thread(() -> {
+                Server server = new Server(port);
             });
-            if (answer.equalsIgnoreCase("yes")) {
+            if (answer.equalsIgnoreCase("yes")
+                    || answer.equalsIgnoreCase("y")) {
                 serverThread.start();
             }
         }
 
-        clientThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Client client = new Client(new User(userName), ipAddress, port);
-            }
+        clientThread = new Thread(() -> {
+            Client client = new Client(new User(userName), ipAddress, port);
         });
         clientThread.start();
     }

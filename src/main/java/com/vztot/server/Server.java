@@ -25,10 +25,6 @@ public class Server {
         run();
     }
 
-    public static void main(String[] args) {
-        Server server = new Server(1717);
-    }
-
     private void run() {
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             while (true) {

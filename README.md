@@ -1,6 +1,8 @@
-# jv-console-chat
-MVP console chat that use sockets
+# jv-console-chat  [![Build Status](https://travis-ci.com/vztot/jv-console-chat.svg?branch=master)](https://travis-ci.com/vztot/jv-console-chat)
+Simple console chat that use sockets.
 
-You can clone it and run your own server or connect to my ip: 176.37.115.67, use port 7777 (should be online)
+You can clone it and run your own server or connect to your friend.
 
-[![Build Status](https://travis-ci.com/vztot/jv-console-chat.svg?branch=master)](https://travis-ci.com/vztot/jv-console-chat)
+pom.xml include build options to build proper jar file
+
+![gif](doc/img/view.png)
